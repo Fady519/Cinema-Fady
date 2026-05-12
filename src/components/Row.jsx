@@ -22,7 +22,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         const request = await axios.get(`${fetchUrl}&page=${page}`);
         setMovies((prev) => [...prev, ...request.data.results]);
         setLoading(false);
-      } 
+      }
       catch (error) {
         console.error("Error fetching data", error);
         setLoading(false);
@@ -70,10 +70,11 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 
       ) : (
 
+
         <div
           ref={rowRef}
           onScroll={handleScroll}
-          className="flex overflow-y-hidden overflow-x-scroll p-4 scrollbar-hide space-x-6 scroll-smooth"
+          className="flex overflow-y-hidden overflow-x-scroll p-4 custom-scrollbar space-x-6 scroll-smooth"
         >
 
           {movies.map((movie) => (
