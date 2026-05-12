@@ -2,41 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer utilities {
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-} */
-
-.custom-scrollbar::-webkit-scrollbar {
-  height: 6px; 
+/* أي تنسيقات عامة هنحتاجها للمشروع كله هنحطها هنا بكرة */
+body {
+  @apply bg-cinema-black text-white;
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #111; 
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #e50914; 
-  border-radius: 10px;
-  transition: background 0.3s ease;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #ff1e1e; 
-}
-
-
-.custom-scrollbar::-webkit-scrollbar {
-  height: 8px; 
-}
-
-
-.custom-scrollbar {
-  padding-bottom: 20px !important; 
-}

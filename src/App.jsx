@@ -1,34 +1,30 @@
-import { HashRouter as Router, useLocation } from 'react-router-dom'; 
+import { HashRouter as Router, useLocation } from 'react-router-dom';
 import AppRoutes from './routes/AppRoutes';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
 
-const AppContent = () => {
+// عملنا Component داخلي عشان نقدر نستخدم useLocation جوا الـ Router
+function AppContent() {
   const location = useLocation();
-
-
-  const authRoutes = ['/signin', '/signup', '/'];
-  const isAuthPage = authRoutes.includes(location.pathname);
+  
+  // بنحدد المسارات اللي مش عايزين النافبار تظهر فيها
+  const hideNavbarPaths = ['/', '/signin', '/signup'];
+  const shouldHideNavbar = hideNavbarPaths.includes(location.pathname.toLowerCase());
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
-      {!isAuthPage && <Navbar />}
-
-      <main className="flex-grow">
+    <div className="min-h-screen bg-cinema-black text-white">
+      {/* مش هتظهر لو إحنا في صفحة الساين إن أو الساين أب */}
+      {!shouldHideNavbar && <Navbar />} 
+      
+      <main>
         <AppRoutes />
       </main>
-
-      {!isAuthPage && <Footer />}
     </div>
   );
-};
+}
 
 function App() {
   return (
-    
     <Router>
-      <ScrollToTop /> 
       <AppContent />
     </Router>
   );
