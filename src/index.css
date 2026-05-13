@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* أي تنسيقات عامة هنحتاجها للمشروع كله هنحطها هنا بكرة */
+
 body {
   @apply bg-cinema-black text-white;
   margin: 0;

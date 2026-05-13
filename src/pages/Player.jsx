@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import YouTube from 'react-youtube'; // تأكد إنك عملت npm install react-youtube
+import YouTube from 'react-youtube'; 
 
 const Player = () => {
   const { id } = useParams();
