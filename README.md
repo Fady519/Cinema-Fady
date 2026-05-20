@@ -3,7 +3,7 @@
 A modern, responsive movie web application built to showcase smooth user interface design and seamless data fetching. This project was built with performance and clean code in mind.
 
 ## 🚀 Live Demo
-*(Insert your live deployment link here, e.g., GitHub Pages or Vercel link)*
+*(https://fady519.github.io/Cinema-Fady/)*
 
 ## ✨ Features
 - **Dynamic Content:** Fetches and displays up-to-date movie data.
